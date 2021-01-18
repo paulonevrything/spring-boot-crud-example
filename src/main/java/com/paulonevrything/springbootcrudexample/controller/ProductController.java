@@ -25,7 +25,8 @@ public class ProductController {
         return service.saveProducts(products);
     }
 
-    @GetMapping("/products")
+//    @GetMapping("/products")
+    @RequestMapping(value = "/products", method = RequestMethod.GET)
     public List<Product> findAllProducts() {
         return service.getProducts();
     }
